@@ -1,4 +1,4 @@
 #[derive(Serialize, Clone)]
 pub struct ResponseEvent {
-    pub value: String,
+    pub handshake_type: String,
 }
