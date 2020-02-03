@@ -46,7 +46,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 
 fn options_responder() -> impl Responder {
-    HttpResponse::Ok()
+    return HttpResponse::Ok()
         .header("Access-Control-Allow-Origin", "*")
         .header("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
         .header("Access-Control-Allow-Headers", "X-PINGOTHER, Content-Type")
