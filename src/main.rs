@@ -18,7 +18,7 @@ use std::env;
 use std::error::Error;
 use std::fmt;
 
-const LOCAL_ADDRESS: &str = "127.0.0.1:3000";
+const LOCAL_ADDRESS: &str = "0.0.0.0:3000";
 
 fn main() -> Result<(), Box<dyn Error>> {
     simple_logger::init_with_level(log::Level::Info)?;
@@ -46,7 +46,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 
 fn options_responder() -> impl Responder {
-    return HttpResponse::Ok()
+    HttpResponse::Ok()
         .header("Access-Control-Allow-Origin", "*")
         .header("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
         .header("Access-Control-Allow-Headers", "X-PINGOTHER, Content-Type")
